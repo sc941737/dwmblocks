@@ -9,7 +9,7 @@ static const Block blocks[] = {
 
 	{"", "date '+%b %d (%a) %H:%M'",					60,		0},
 
-	{"X ", "xdotool getwindowfocus windowkill",				0,		9},
+	{"X ", "xdotool windowclose $(xdotool getwindowfocus)",			0,		9},
 };
 
 //sets delimeter between status commands. NULL character ('\0') means no delimeter.
