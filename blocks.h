@@ -3,6 +3,8 @@ static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
         {"", "printf ''", 							0, 		0},
 
+	{"🔊 ", "vol=$(wpctl get-volume @DEFAULT_AUDIO_SINK@); echo ${vol#*.}%",	0,		10},
+
 	{"Mem: ", "free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g",	30,		0},
 
 	{"", "echo \"$(cat /sys/class/power_supply/BAT1/capacity)%\"",		60,		0},
